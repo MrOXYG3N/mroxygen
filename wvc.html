@@ -5,16 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Visitor Counter</title>
     <style>
-        /* Style to make the counter full-width */
+        /* Style for the body and background */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black; /* Black background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+        }
+
+        /* Style for the counter container */
         .counter-container {
             width: 100%;
             text-align: center;
         }
 
+        /* Full-width counter scaling */
         iframe {
-            width: 100%;
-            max-width: 800px; /* Optional: Set a max width */
-            height: auto;
+            width: 100%; /* Make it full-width */
+            height: auto; /* Maintain aspect ratio */
         }
     </style>
 </head>
