@@ -6,13 +6,25 @@
     <title>Clock Widget</title>
     <script src="https://cdn.logwork.com/widget/text.js"></script>
     <style>
-        body {
+        /* Reset all margin and padding */
+        * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+        }
+        /* Fullscreen body */
+        html, body {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        /* Center the widget */
+        body {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
             background-color: #000; /* Optional background color */
         }
     </style>
