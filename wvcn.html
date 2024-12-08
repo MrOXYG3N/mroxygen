@@ -3,51 +3,54 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Visitor Counter</title>
+    <title>Full-Screen Visitor Counter</title>
     <style>
         body {
+            margin: 0;
+            padding: 0;
             background-color: black; /* Black background */
-            color: white; /* White text */
             display: flex;
-            flex-direction: column;
             align-items: center;
             justify-content: center;
             height: 100vh; /* Full height */
-            margin: 0;
-            font-family: Arial, sans-serif; /* Clean font */
+            overflow: hidden; /* Prevent scrollbars */
         }
-        .counter svg text {
-            font-size: 18px; /* Larger font size for text */
-            font-weight: bold; /* Bold for emphasis */
+        .counter {
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
         }
-        .counter svg text:nth-child(2),
-        .counter svg text:nth-child(3),
-        .counter svg text:nth-child(4) {
-            font-size: 20px; /* Larger size for Total, Today, and Yesterday */
+        svg {
+            width: 100%;
+            height: 100%;
+        }
+        text {
+            font-size: 5vw; /* Responsive font size based on viewport width */
+            font-weight: bold;
+            fill: #ffffff; /* White text */
         }
     </style>
 </head>
 <body>
-    <h1>Welcome to My Website!</h1>
-    <p>Check out the visitor counter below:</p>
-    
     <!-- Visitor Counter -->
     <div class="counter">
-        <script type="text/javascript" src="https://www.counters-free.net/count/gsvj"></script>
-        <a href="https://www.counters-free.net/stats/gsvj" style="text-decoration: none;">
-            <svg width="100" height="90" id="besucherzaehler2">
-                <g>
-                    <rect width="100" height="70" x="0" y="0" style="fill: #2f292a;" fill-opacity="1.0"></rect>
-                    <text x="6" y="38" font-family="Roboto, sans-serif" fill="#ffffff">Total: 1</text>
-                    <text x="6" y="50" font-family="Roboto, sans-serif" fill="#ffffff">Today: 1</text>
-                    <text x="6" y="62" font-family="Roboto, sans-serif" fill="#ffffff">Yesterday: 0</text>
-                    <rect width="3" height="9" x="6" y="14" style="fill: #ffffff;"></rect>
-                    <rect width="3" height="17" x="11" y="6" style="fill: #ffffff;"></rect>
-                    <rect width="3" height="13" x="16" y="10" style="fill: #ffffff;"></rect>
-                    <text x="25" y="23" style="font-weight: bold;" font-family="Roboto, sans-serif" fill="#ffffff">Visitors</text>
-                </g>
-            </svg>
-        </a>
+        <svg id="visitor-counter">
+            <g>
+                <!-- Full background rectangle -->
+                <rect width="100%" height="100%" style="fill: #2f292a;" fill-opacity="1.0"></rect>
+
+                <!-- Text for Total -->
+                <text x="10%" y="30%">Total: 1</text>
+                
+                <!-- Text for Today -->
+                <text x="10%" y="50%">Today: 1</text>
+                
+                <!-- Text for Yesterday -->
+                <text x="10%" y="70%">Yesterday: 0</text>
+                
+                <!-- Title -->
+                <text x="10%" y="15%" font-size="6vw" style="font-weight: bold;">Visitors</text>
+            </g>
+        </svg>
     </div>
 </body>
 </html>
