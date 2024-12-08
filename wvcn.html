@@ -6,36 +6,24 @@
     <title>Visitor Counter</title>
     <style>
         body {
-            background-color: black; /* Set the background color to black */
-            color: white; /* Set the text color to white */
+            background-color: black; /* Black background */
+            color: white; /* White text */
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            height: 100vh; /* Full height of the screen */
+            height: 100vh; /* Full height */
             margin: 0;
-            font-family: Arial, sans-serif; /* Use a clean font */
+            font-family: Arial, sans-serif; /* Clean font */
         }
-        h1, p {
-            text-align: center;
+        .counter svg text {
+            font-size: 18px; /* Larger font size for text */
+            font-weight: bold; /* Bold for emphasis */
         }
-        h1 {
-            font-size: 36px; /* Larger heading size */
-        }
-        p {
-            font-size: 24px; /* Larger paragraph text */
-        }
-        .counter {
-            margin-top: 20px;
-            font-size: 24px; /* Larger counter text */
-        }
-        a {
-            font-size: 18px; /* Larger link text */
-            color: #1e90ff; /* Blue color for links */
-            text-decoration: none; /* Remove underline */
-        }
-        a:hover {
-            text-decoration: underline; /* Add underline on hover */
+        .counter svg text:nth-child(2),
+        .counter svg text:nth-child(3),
+        .counter svg text:nth-child(4) {
+            font-size: 20px; /* Larger size for Total, Today, and Yesterday */
         }
     </style>
 </head>
@@ -46,17 +34,20 @@
     <!-- Visitor Counter -->
     <div class="counter">
         <script type="text/javascript" src="https://www.counters-free.net/count/gsvj"></script>
-    </div>
-    
-    <!-- Link to Hotel Software -->
-    <p>
-        Need hotel management tools? Check this out: 
-        <a href="https://www.easybooking.eu/">Hotel Software</a>
-    </p>
-    
-    <!-- Additional Visitor Counter -->
-    <div class="counter">
-        <script type="text/javascript" src="https://www.whomania.com/ctr?id=0ccc4cf700d6984a1ddce08e4f7507d8304fdb6f"></script>
+        <a href="https://www.counters-free.net/stats/gsvj" style="text-decoration: none;">
+            <svg width="100" height="90" id="besucherzaehler2">
+                <g>
+                    <rect width="100" height="70" x="0" y="0" style="fill: #2f292a;" fill-opacity="1.0"></rect>
+                    <text x="6" y="38" font-family="Roboto, sans-serif" fill="#ffffff">Total: 1</text>
+                    <text x="6" y="50" font-family="Roboto, sans-serif" fill="#ffffff">Today: 1</text>
+                    <text x="6" y="62" font-family="Roboto, sans-serif" fill="#ffffff">Yesterday: 0</text>
+                    <rect width="3" height="9" x="6" y="14" style="fill: #ffffff;"></rect>
+                    <rect width="3" height="17" x="11" y="6" style="fill: #ffffff;"></rect>
+                    <rect width="3" height="13" x="16" y="10" style="fill: #ffffff;"></rect>
+                    <text x="25" y="23" style="font-weight: bold;" font-family="Roboto, sans-serif" fill="#ffffff">Visitors</text>
+                </g>
+            </svg>
+        </a>
     </div>
 </body>
 </html>
